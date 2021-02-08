@@ -1,5 +1,4 @@
 import supertest from 'supertest';
-import { decorateService } from '../../lib/decorate';
 import {apikeys, urls} from '../config';
 
 const InfoTMDB = function InfoTMDB() {
@@ -9,12 +8,9 @@ const InfoTMDB = function InfoTMDB() {
 
         return r;
     };
-
     this.search = async function search(params) {
         const r = await supertest(urls.tmdb)
             .get(`/3/search/person?api_key=${apikeys.apikey_v3}&query='Emma%20Watson'`);
-           //.get(`/3/search/personapi_key=${apikeys.apikey_v3}`)
-           //.send(params);
         return r;
     };
     this.info = async function info() {
@@ -24,9 +20,12 @@ const InfoTMDB = function InfoTMDB() {
             .send();
         return r;
     };
+    this.searchByKeyword = async function searchByKeyword() {
+        const r = await supertest(urls.tmdb)
+            .get(`/3/search/keyword?api_key=${apikeys.apikey_v3}&query='South'`);
+        return r;
+    };
 };
-
-decorateService(InfoTMDB);
 
 export { InfoTMDB };
 
