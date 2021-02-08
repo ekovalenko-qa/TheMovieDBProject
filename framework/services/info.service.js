@@ -5,15 +5,14 @@ const InfoTMDB = function InfoTMDB() {
     this.top = async function top() {
         const r = await supertest(urls.tmdb)
             .get(`/3/movie/top_rated?api_key=${apikeys.apikey_v3}`);
-
         return r;
     };
-    this.search = async function search(params) {
+    this.searchByName = async function searchByName(params) {
         const r = await supertest(urls.tmdb)
             .get(`/3/search/person?api_key=${apikeys.apikey_v3}&query='Emma%20Watson'`);
         return r;
     };
-    this.info = async function info() {
+    this.searchById = async function searchById() {
         const id = '76341';
         const r = await supertest(urls.tmdb)
             .get(`/3/movie/${id}?api_key=${apikeys.apikey_v3}`)

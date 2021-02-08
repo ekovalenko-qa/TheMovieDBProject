@@ -1,33 +1,31 @@
-import { apikeys, urls } from '../config';
 import supertest from 'supertest';
+import { apikeys, userdata, urls } from '../config';
 
 
-// Авторизация происходит в 3 этапа:
-// 1. Создание временного токена TempToken()
-// 2. Валидация временного токена через имя пользователя и пароль usernameAuth()
-// 3. Создание id сессии, зависит от временного токена
-// На выходе получаем массив result[token, <результат валидации>,id сессии]
+/**Авторизация происходит в 3 этапа:
+1. Создание временного токена TempToken()
+2. Валидация временного токена через имя пользователя и пароль usernameAuth()
+3. Создание id сессии, зависит от временного токена
+
+На выходе получаем массив result[token, <результат валидации>,id сессии],
+ элементы массива могут использоваться в других запросах
+*/
 
 const headers = {
     'Content-Type': 'application/json',
 };
 
-const TempToken = async function TempToken() {
-       const r = await supertest(urls.tmdb)
-            .get(`/3/authentication/token/new?api_key=${apikeys.apikey_v3}`);
-        const token = r.body.request_token;
-        return token;
-}
-
 const AuthTMDB = function AuthTMDB() {
     this.usernameAuth = async function usernameAuth() {
         const result = [];
-        const token = await TempToken();
+        const t = await supertest(urls.tmdb)
+             .get(`/3/authentication/token/new?api_key=${apikeys.apikey_v3}`);
+         const token = t.body.request_token;
         result[0] = token;
 
         const params = {
-            "username": "Fox.red",
-            "password": "q12345",
+            "username": userdata.username,
+            "password": userdata.password,
             "request_token": token,
         };
         const r = await supertest(urls.tmdb)

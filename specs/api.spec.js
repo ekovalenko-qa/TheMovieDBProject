@@ -1,7 +1,7 @@
 import { test } from '@jest/globals';
 import { apiProvider } from '../framework';
 
-/**  Тесты для API с использованием supertest и api провайдера на примере сайта themoviedb*/
+/**  Тесты для API с использованием supertest и api провайдера на примере сайта themoviedb.org*/
 
 test('1. Возвращает топ фильмов', async () => {
     const r = await apiProvider()
@@ -17,15 +17,15 @@ test('2. Поиск фильмов по артисту', async () => {
     };
     const r = await apiProvider()
         .InfoTMDB()
-        .search(params);
+        .searchByName(params);
     expect(r.body.results[1].name)
         .toBe('Emma Watson');
 });
 
-test('3. Возвращает информацию о фильме по id', async () => {
+test('3. Поиск информации о фильме по id', async () => {
     const r = await apiProvider()
         .InfoTMDB()
-        .info();
+        .searchById();
     expect(r.status)
         .toBe(200);
 });
@@ -52,7 +52,7 @@ test('6. Добавить оценку фильму', async () => {
         .toBe(201);
 });
 
-test('7. Удалить свою оценку фильма', async () => {
+test('7. Удалить оценку фильма', async () => {
     const authData = await apiProvider().AuthTMDB().usernameAuth();
     const sessionId = authData[2];
     const r = await apiProvider().RatingTMDB().deleteRate(sessionId);
