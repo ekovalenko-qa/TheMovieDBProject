@@ -5,57 +5,82 @@ import { apiProvider } from '../framework';
 
 test('1. Возвращает топ фильмов', async () => {
     const r = await apiProvider()
-        .InfoTMDB()
-        .top();
+        .MovieTMDB()
+        .getTop();
     expect(r.status)
         .toBe(200);
 });
 
-test('2. Поиск фильмов по артисту', async () => {
+test('2. Основная информация о фильме по id', async () => {
+    const r = await apiProvider()
+        .MovieTMDB()
+        .getById();
+    expect(r.status)
+        .toBe(200);
+});
+
+test('3. Список похожих фильмов', async () => {
+    const r = await apiProvider()
+        .MovieTMDB()
+        .getSimilar();
+    expect(r.status)
+        .toBe(200);
+});
+
+test('4. Поиск фильмов по артисту', async () => {
     const params = {
         query: 'Emma Watson',
     };
     const r = await apiProvider()
-        .InfoTMDB()
+        .SearchTMDB()
         .searchByName(params);
     expect(r.body.results[1].name)
         .toBe('Emma Watson');
 });
 
-test('3. Поиск информации о фильме по id', async () => {
+test('5. Поиск коллекции фильмов', async () => {
     const r = await apiProvider()
-        .InfoTMDB()
-        .searchById();
+        .SearchTMDB()
+        .searchСollection();
     expect(r.status)
         .toBe(200);
 });
 
-test('4. Поиск по слову', async () => {
+test('6. Поиск по ключевому слову', async () => {
     const r = await apiProvider()
-        .InfoTMDB()
+        .SearchTMDB()
         .searchByKeyword();
     expect(r.status)
         .toBe(200);
 });
 
-test('5. Проверить авторизацию путем ввода имени пользователя и пароля', async () => {
+test('7. Проверить авторизацию путем ввода имени пользователя и пароля', async () => {
     const r = await apiProvider().AuthTMDB().usernameAuth();
-    expect(r[1])
+    expect(r[0])
         .toBe(true);
 });
 
-test('6. Добавить оценку фильму', async () => {
+test('8. Добавить оценку фильму', async () => {
     const authData = await apiProvider().AuthTMDB().usernameAuth();
-    const sessionId = authData[2];
-    const r = await apiProvider().RatingTMDB().addRate(sessionId);
+    const sessionId = authData[1];
+    const r = await apiProvider().MovieTMDB().addRate(sessionId);
     expect(r.status)
         .toBe(201);
 });
 
-test('7. Удалить оценку фильма', async () => {
+test('9. Удалить оценку фильма', async () => {
     const authData = await apiProvider().AuthTMDB().usernameAuth();
-    const sessionId = authData[2];
-    const r = await apiProvider().RatingTMDB().deleteRate(sessionId);
+    const sessionId = authData[1];
+    const r = await apiProvider().MovieTMDB().deleteRate(sessionId);
     expect(r.status)
          .toBe(200);
+});
+
+test('10. Добавить фильм в избранное', async () => {
+    const authData = await apiProvider().AuthTMDB().usernameAuth();
+    const sessionId = authData[1];
+    const accountId = authData[2];
+    const r = await apiProvider().AccountTMDB().addToFavorite(accountId,sessionId);
+    expect(r.status)
+        .toBe(201);
 });

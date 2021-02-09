@@ -1,12 +1,13 @@
-import { AuthTMDB, UsernameAuth } from './services/auth.service';
-import { InfoTMDB } from './services/info.service';
-import { RatingTMDB } from './services/raiting.service';
-
+import { AccountTMDB } from './services/account.service';
+import { AuthTMDB } from './services/auth.service';
+import { MovieTMDB } from './services/movei.service';
+import { SearchTMDB } from './services/search.service';
 
 const apiProvider = () => ({
-    InfoTMDB: () => new InfoTMDB(),
+    AccountTMDB: () => new AccountTMDB(),
     AuthTMDB: () => new AuthTMDB(),
-    RatingTMDB: () => new RatingTMDB(),
+    MovieTMDB: () => new MovieTMDB(),
+    SearchTMDB: () => new SearchTMDB(),
 });
 
 export { apiProvider };

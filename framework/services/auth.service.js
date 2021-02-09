@@ -3,11 +3,12 @@ import { apikeys, userdata, urls } from '../config';
 
 
 /**Авторизация происходит в 3 этапа:
-1. Создание временного токена TempToken()
+1. Создание временного токена tempToken
 2. Валидация временного токена через имя пользователя и пароль usernameAuth()
-3. Создание id сессии, зависит от временного токена
+3. Создание id сессии session, зависит от временного токена
+ В accountId находим id аккаунта
 
-На выходе получаем массив result[token, <результат валидации>,id сессии],
+На выходе получаем массив result[<результат валидации>,id сессии, id аккаунта],
  элементы массива могут использоваться в других запросах
 */
 
@@ -18,10 +19,9 @@ const headers = {
 const AuthTMDB = function AuthTMDB() {
     this.usernameAuth = async function usernameAuth() {
         const result = [];
-        const t = await supertest(urls.tmdb)
+        const tempToken = await supertest(urls.tmdb)
              .get(`/3/authentication/token/new?api_key=${apikeys.apikey_v3}`);
-         const token = t.body.request_token;
-        result[0] = token;
+        const token = tempToken.body.request_token;
 
         const params = {
             "username": userdata.username,
@@ -32,7 +32,7 @@ const AuthTMDB = function AuthTMDB() {
             .post(`/3/authentication/token/validate_with_login?api_key=${apikeys.apikey_v3}`)
             .set(headers)
             .send(params);
-        result[1] = r.body.success;
+        result[0] = r.body.success;
 
         const params1 = {
             "request_token": token,
@@ -41,7 +41,11 @@ const AuthTMDB = function AuthTMDB() {
             .post(`/3/authentication/session/new?api_key=${apikeys.apikey_v3}`)
             .set(headers)
             .send(params1);
-        result[2] = session.body.session_id;
+        result[1] = session.body.session_id;
+        const account = await supertest(urls.tmdb)
+            .get(`/3/account?api_key=45186a994a717d2a0603271ff89e75b6&session_id=${result[1]}`);
+        const accountId = account.body.id;
+        result[2] = accountId;
         return result;
     };
 }
