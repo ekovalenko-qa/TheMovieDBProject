@@ -20,7 +20,8 @@ const AuthTMDB = function AuthTMDB() {
     this.usernameAuth = async function usernameAuth() {
         const result = [];
         const tempToken = await supertest(urls.tmdb)
-             .get(`/3/authentication/token/new?api_key=${apikeys.apikey_v3}`);
+             .get(`/3/authentication/token/new`)
+             .query({ api_key: `${apikeys.apikey_v3}`});
         const token = tempToken.body.request_token;
 
         const params = {
@@ -29,8 +30,9 @@ const AuthTMDB = function AuthTMDB() {
             "request_token": token,
         };
         const r = await supertest(urls.tmdb)
-            .post(`/3/authentication/token/validate_with_login?api_key=${apikeys.apikey_v3}`)
+            .post(`/3/authentication/token/validate_with_login`)
             .set(headers)
+            .query({ api_key: `${apikeys.apikey_v3}`})
             .send(params);
         result[0] = r.body.success;
 
@@ -38,12 +40,14 @@ const AuthTMDB = function AuthTMDB() {
             "request_token": token,
         };
         const session = await supertest(urls.tmdb)
-            .post(`/3/authentication/session/new?api_key=${apikeys.apikey_v3}`)
+            .post(`/3/authentication/session/new`)
             .set(headers)
+            .query({ api_key: `${apikeys.apikey_v3}`})
             .send(params1);
         result[1] = session.body.session_id;
         const account = await supertest(urls.tmdb)
-            .get(`/3/account?api_key=45186a994a717d2a0603271ff89e75b6&session_id=${result[1]}`);
+            .get(`/3/account`)
+            .query({ api_key: `${apikeys.apikey_v3}`, session_id: `${result[1]}` });
         const accountId = account.body.id;
         result[2] = accountId;
         return result;
