@@ -4,13 +4,15 @@ import { apikeys, userdata, urls } from '../config';
 
 /**Авторизация происходит в 3 этапа:
 1. Создание временного токена tempToken
-2. Валидация временного токена через имя пользователя и пароль usernameAuth()
-3. Создание id сессии session, зависит от временного токена
- В accountId находим id аккаунта
-
-На выходе получаем массив result[<результат валидации>,id сессии, id аккаунта],
- элементы массива могут использоваться в других запросах
-*/
+2. Валидация временного токена через имя пользователя и пароль, status (true/false)
+3. Создание id сессии sessionId, зависит от временного токена
+ В accountId находим id аккаунта. На выходе получаем объект
+ authData = {
+ status: <результат валидации>,
+ sessionId: <id сессии>,
+ accountId: <id аккаунта}>
+ }
+ */
 
 const headers = {
     'Content-Type': 'application/json',
@@ -18,12 +20,11 @@ const headers = {
 
 const AuthTMDB = function AuthTMDB() {
     this.usernameAuth = async function usernameAuth() {
-        const result = [];
+        let authData = {};
         const tempToken = await supertest(urls.tmdb)
              .get(`/3/authentication/token/new`)
              .query({ api_key: `${apikeys.apikey_v3}`});
         const token = tempToken.body.request_token;
-
         const params = {
             "username": userdata.username,
             "password": userdata.password,
@@ -34,7 +35,7 @@ const AuthTMDB = function AuthTMDB() {
             .set(headers)
             .query({ api_key: `${apikeys.apikey_v3}`})
             .send(params);
-        result[0] = r.body.success;
+        authData.status = r.body.success;
 
         const params1 = {
             "request_token": token,
@@ -44,13 +45,12 @@ const AuthTMDB = function AuthTMDB() {
             .set(headers)
             .query({ api_key: `${apikeys.apikey_v3}`})
             .send(params1);
-        result[1] = session.body.session_id;
+        authData.sessionId = session.body.session_id;
         const account = await supertest(urls.tmdb)
             .get(`/3/account`)
-            .query({ api_key: `${apikeys.apikey_v3}`, session_id: `${result[1]}` });
-        const accountId = account.body.id;
-        result[2] = accountId;
-        return result;
+            .query({ api_key: `${apikeys.apikey_v3}`, session_id: `${authData.sessionId}` });
+        authData.accountId = account.body.id;
+        return authData;
     };
 }
 

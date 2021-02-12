@@ -6,7 +6,7 @@ const headers = {
 };
 
 const AccountTMDB = function AccountTMDB() {
-    this.addToFavorite = async function addToFavorite(accountId,sessionId) {
+    this.addToFavorite = async function addToFavorite(sessionId, accountId) {
         const params = {
             media_type: 'movie',
             media_id: 550,
