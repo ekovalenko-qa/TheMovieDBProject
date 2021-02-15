@@ -52,6 +52,7 @@
         "@codeceptjs/examples": "^1.2.1",
         "@codeceptjs/ui": "^0.4.3",
         "codeceptjs": "^3.0.5",
+        "faker": "^5.4.0",
         "jest": "^26.6.3",
         "playwright": "^1.8.1",
         "supertest": "^6.1.3"

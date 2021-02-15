@@ -1,4 +1,4 @@
-const { I } = inject();
+const { I, mainPage } = inject();
 
 module.exports = {
     // setting locators
@@ -10,6 +10,7 @@ module.exports = {
 
     // introducing methods
     login(username, password) {
+        mainPage.comeIn();
         I.fillField(this.fields.username, username);
         I.fillField(this.fields.password, password);
         I.click(this.loginButton);

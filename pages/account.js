@@ -5,7 +5,7 @@ module.exports = {
     fields: {
 
     },
-    loginButton: {css: '#login_button'},
+    reviewButton: {css: '#new_shortcut_bar > li.false.k-item.k-menu-item.k-state-default.k-first > span'},
 
     // introducing methods
     login(username, password) {
