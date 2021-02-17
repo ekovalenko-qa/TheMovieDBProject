@@ -5,7 +5,7 @@ const { urls } = require('../framework/config/urls');
 module.exports = {
     // setting locators
     fields: {
-        movieName: '#original_header > div.header_poster_wrapper.true > section > div.title.ott_true > h2 > a',
+        movieName: '#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2',
         reviewArea: '#editor-textarea > div > textarea',
 
     },
@@ -16,7 +16,7 @@ module.exports = {
 
     // introducing methods
     addToFavorites() {
-        I.amOnPage('https://www.themoviedb.org/tv/1622-supernatural');
+        I.click(this.fields.movieName);
         I.click(this.favoriteButton);
     },
     addReview() {

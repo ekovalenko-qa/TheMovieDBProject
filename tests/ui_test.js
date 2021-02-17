@@ -20,22 +20,23 @@ Scenario('3. Пользователь может авторизоваться', 
     I.see('Fox.red');
 });
 
-Scenario('4. Пользователь может добавить фильм в избранное', ({ I, loginPage, moviePage }) => {
+Scenario('4. Пользователь может добавить фильм в избранное', ({ I, loginPage, moviePage, mainPage }) => {
     loginPage.login(userdata.username, userdata.password);
+    mainPage.search('Девушка, которая боялась дождя');
     moviePage.addToFavorites();
 });
 
-Scenario('5. Пользователь может зарегистрироваться', ({ I, registrationPage }) => {
-     registrationPage.createAccount();
-     //I.see('Войти в свою учётную запись');
-
-});
-
-// Scenario('6. Пользователь может оставить рецензию на фильм', ({ I, loginPage, moviePage }) => {
-//     loginPage.login(userdata.username, userdata.password);
-//     moviePage.addReview();
-//     I.see('This review is currently awaiting moderator approval.');
+// Scenario('5. Пользователь может зарегистрироваться', ({ I, registrationPage }) => {
+//      registrationPage.createAccount();
+//      I.see('Войти в свою учётную запись');
+//
 // });
+
+Scenario('6. Пользователь может оставить рецензию на фильм', ({ I, loginPage, mainPage, moviePage }) => {
+    loginPage.login(userdata.username, userdata.password);
+    moviePage.addReview();
+    I.see('This review is currently awaiting moderator approval.');
+});
 
 Scenario('7. Пользователь может посмотреть свой список избранного', ({ I, loginPage, mainPage }) => {
     loginPage.login(userdata.username, userdata.password);
