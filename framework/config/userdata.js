@@ -3,4 +3,4 @@ const userdata = {
     password: 'q12345',
 };
 
-module.exports = { userdata }
+module.exports = { userdata };

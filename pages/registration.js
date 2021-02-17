@@ -1,26 +1,58 @@
-// enable I and another page object
-const { I } = inject();
+const { I, mainPage } = inject();
+const faker = require('faker');
 
-const { urls } = require('../framework/config/urls');
+const PersonBuilder = function PersonBuilder() {
+    this.addPassword = function addPassword() {
+        this.Password = faker.internet.password();
+        return this;
+    };
+    this.addName = function addName() {
+        this.Name = faker.name.firstName();
+        return this;
+    };
+    this.addEmail = function addEmail() {
+        this.Email = faker.internet.email();
+        return this;
+    };
+    this.generate = function generate() {
+        const fields = Object.getOwnPropertyNames(this);
+        const data = {};
+        fields.forEach((fieldName) => {
+            if (this[fieldName] && typeof this[fieldName] !== 'function') {
+                data[fieldName] = this[fieldName];
+            }
+        });
+        return data;
+    };
+};
+
 
 module.exports = {
     // setting locators
     fields: {
-        search: '#inner_search_v4',
-        movieName: '#popular_scroller > div > div:nth-child(3) > div.content > h2 > a',
+        email: '#email',
+        password: '#password',
+        passwordConfirm: '#password_confirm',
+        username: '#username',
+
     },
-    searchButton: {css: '#inner_search_form > input[type=submit]'},
-    comeInButton: {css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a'},
+    regButton: {css: '#sign_up_button'},
 
     // introducing methods
-    searchMovie(movie) {
-        I.amOnPage(urls.tmdbUI);
-        I.fillField(this.fields.search, movie);
-        I.click(this.searchButton);
-    },
-    comeIn() {
-        I.amOnPage(urls.tmdbUI);
-        I.click(this.comeInButton);
-    },
+    createAccount() {
+        const person = new PersonBuilder();
+        const personData = person
+            .addName()
+            .addEmail()
+            .addPassword()
+            .generate();
 
+        mainPage.goRegistration();
+        I.fillField(this.fields.username, personData.Name);
+        I.fillField(this.fields.password, personData.Password);
+        I.fillField(this.fields.passwordConfirm, personData.Password);
+        I.fillField(this.fields.email, personData.Email);
+        I.click(this.regButton);
+    },
 }
+
