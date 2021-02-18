@@ -51,5 +51,5 @@ Scenario('7. Пользователь может посмотреть свой �
   loginPage.login(userdata.username, userdata.password);
   mainPage.goToAccount();
   I.see('Fox.red');
-  I.see('СтатистикаHHH');
+  I.see('Статистика');
 });

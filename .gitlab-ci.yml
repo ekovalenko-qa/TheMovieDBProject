@@ -1,5 +1,11 @@
 stages:
+  - deploy
   - test
+
+trigger_build:
+  stage: deploy
+  script:
+    - "curl -X POST -F token='bef9f82c5663bed501133bdbb90bb2' -F ref=codecept https://gitlab.com/api/v4/projects/24501886/trigger/pipeline"
 
 QA:
   image: circleci/node:13
