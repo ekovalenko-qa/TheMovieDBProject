@@ -3,33 +3,32 @@ const { I } = inject();
 const { urls } = require('../framework/config/urls');
 
 module.exports = {
-    // setting locators
-    fields: {
-        search: '#inner_search_v4',
-        movieName: '#popular_scroller > div > div:nth-child(3) > div.content > h2 > a',
-    },
-    searchButton: {css: '#inner_search_form > input[type=submit]'},
-    comeInButton: {css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a'},
-    registrationButton: {css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a'},
-    accountButton: {css: 'body > footer > nav > div.join > a'},
+  // setting locators
+  fields: {
+    search: '#inner_search_v4',
+    movieName: '#popular_scroller > div > div:nth-child(3) > div.content > h2 > a',
+  },
+  searchButton: { css: '#inner_search_form > input[type=submit]' },
+  comeInButton: { css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a' },
+  registrationButton: { css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a' },
+  accountButton: { css: 'body > footer > nav > div.join > a' },
 
-    // introducing methods
-    search(param) {
-        I.amOnPage(urls.tmdbUI);
-        I.fillField(this.fields.search, param);
-        I.click(this.searchButton);
-    },
-    comeIn() {
-        I.amOnPage(urls.tmdbUI);
-        I.click(this.comeInButton);
-    },
-    goRegistration() {
-        I.amOnPage(urls.tmdbUI);
-        I.click(this.registrationButton);
-    },
-    goToAccount(){
-        I.click(this.accountButton);
+  // introducing methods
+  search(param) {
+    I.amOnPage(urls.tmdbUI);
+    I.fillField(this.fields.search, param);
+    I.click(this.searchButton);
+  },
+  comeIn() {
+    I.amOnPage(urls.tmdbUI);
+    I.click(this.comeInButton);
+  },
+  goRegistration() {
+    I.amOnPage(urls.tmdbUI);
+    I.click(this.registrationButton);
+  },
+  goToAccount() {
+    I.click(this.accountButton);
+  },
 
-    },
-
-}
+};
