@@ -52,6 +52,7 @@ pages:
     - mkdir public
     - mv ./jest_html_reporters.html public
     - mv ./allure-report/* public
+
   artifacts:
     paths:
       - public
