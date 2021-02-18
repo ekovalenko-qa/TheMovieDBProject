@@ -1,6 +1,7 @@
 stages:
   - test
   - report
+  - reportpublic
 
 API:
   image: circleci/node:13
