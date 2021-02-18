@@ -31,11 +31,11 @@ Scenario('4. Пользователь может добавить фильм в 
   moviePage.addToFavorites();
 });
 
-// Scenario('5. Пользователь может зарегистрироваться', ({ I, registrationPage }) => {
-//      registrationPage.createAccount();
-//      I.see('Войти в свою учётную запись');
-//
-// });
+Scenario('5. Пользователь может зарегистрироваться', ({ I, registrationPage }) => {
+     registrationPage.createAccount();
+     I.see('Войти в свою учётную запись');
+
+});
 
 // eslint-disable-next-line no-undef
 // Scenario('6. Пользователь может оставить рецензию на фильм', ({ I, loginPage, moviePage }) => {
