@@ -13,7 +13,7 @@ exports.config = {
       url: 'http://localhost',
       show: false,
       browser: 'chromium',
-    }
+    },
   },
   include: {
     I: './steps_file.js',
@@ -27,15 +27,18 @@ exports.config = {
   mocha: {},
   name: 'TheMovieDB',
   plugins: {
+    allure: {
+      enabled: true,
+    },
     pauseOnFail: {},
     retryFailedStep: {
-      enabled: true
+      enabled: true,
     },
     tryTo: {
-      enabled: true
+      enabled: true,
     },
     screenshotOnFail: {
-      enabled: true
-    }
-  }
-}
+      enabled: true,
+    },
+  },
+};
