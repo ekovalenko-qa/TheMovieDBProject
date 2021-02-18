@@ -32,7 +32,7 @@ UI:
       - output
 
 allure_job:
-  stage: reports
+  stage: report
   tags:
     - docker
   image: frankescobar/allure-docker-service
