@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --config jest.config.local.js --testTimeout=50000",
-        "codeceptjs": "codeceptjs run --steps --plugins allure",
+        "codeceptjs": "npx codeceptjs run --steps --plugins allure",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app",
         "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
