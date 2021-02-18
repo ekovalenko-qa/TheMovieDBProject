@@ -1,5 +1,6 @@
 stages:
   - test
+  - report
 
 QA:
   image: circleci/node:13
@@ -15,3 +16,13 @@ QA:
     expire_in: 1 week
     paths:
       - jest_html_reporters.html
+pages:
+  stage: report
+  script:
+    - mkdir public
+    - mv ./jest_html_reporters.html public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - when: always
