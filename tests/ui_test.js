@@ -2,11 +2,12 @@ const { userdata } = require('../framework/config/userdata');
 const { urls } = require('../framework/config/urls');
 
 // eslint-disable-next-line no-undef
-Feature('UI тесты для сайта https://www.themoviedb.org');
+Feature('UI тесты для сайта https://www.themoviedb.org @smoke');
 
 // eslint-disable-next-line no-undef
 Scenario('1. Пользователь может найти информацию о фильме по названию', ({ I, mainPage }) => {
   mainPage.search('Монстры на каникулах');
+  I.say('Allure working!');
   I.see('Монстры на каникулах');
 });
 
