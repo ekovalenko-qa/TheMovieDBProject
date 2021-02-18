@@ -47,10 +47,11 @@ allure_job:
     - when: always
 
 pages:
-  stage: report
+  stage: reportpublic
   script:
     - mkdir public
     - mv ./jest_html_reporters.html public
+    - mv ./allure-report/* public
   artifacts:
     paths:
       - public
