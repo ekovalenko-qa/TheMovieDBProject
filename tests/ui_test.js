@@ -25,16 +25,18 @@ Scenario('3. Пользователь может авторизоваться', 
 });
 
 // eslint-disable-next-line no-undef
-Scenario('4. Пользователь может добавить фильм в избранное', ({ I, loginPage, moviePage, mainPage }) => {
+Scenario('4. Пользователь может добавить фильм в избранное', ({
+  I, loginPage, moviePage, mainPage,
+}) => {
   loginPage.login(userdata.username, userdata.password);
   mainPage.search('Девушка, которая боялась дождя');
   moviePage.addToFavorites();
 });
 
+// eslint-disable-next-line no-undef
 Scenario('5. Пользователь может зарегистрироваться', ({ I, registrationPage }) => {
-     registrationPage.createAccount();
-     I.see('Войти в свою учётную запись');
-
+  registrationPage.createAccount();
+  I.see('Войти в свою учётную запись');
 });
 
 // eslint-disable-next-line no-undef
@@ -49,5 +51,5 @@ Scenario('7. Пользователь может посмотреть свой �
   loginPage.login(userdata.username, userdata.password);
   mainPage.goToAccount();
   I.see('Fox.red');
-  I.see('Статистика');
+  I.see('СтатистикаHHH');
 });
