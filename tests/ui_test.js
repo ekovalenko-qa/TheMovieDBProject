@@ -5,15 +5,16 @@ const { urls } = require('../framework/config/urls');
 Feature('UI тесты для сайта https://www.themoviedb.org @smoke');
 
 // eslint-disable-next-line no-undef
-Scenario('1. Пользователь может найти информацию о фильме по названию', ({ I, mainPage }) => {
-  mainPage.search('Монстры на каникулах');
-  I.say('Allure working!');
-  I.see('Монстры на каникулах');
-});
+// Scenario('1. Пользователь может найти информацию о фильме по названию', ({ I, mainPage }) => {
+//   mainPage.search('Монстры на каникулах');
+//   I.say('Allure working!');
+//   I.see('Монстры на каникулах');
+// });
 
 // eslint-disable-next-line no-undef
 Scenario('2. Пользователь может найти информацию об артисте по имени', ({ I, mainPage }) => {
   mainPage.search('Bill Nighy');
+  I.say('Allure working!');
   I.see('Bill Nighy');
 });
 

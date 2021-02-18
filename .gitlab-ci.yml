@@ -22,7 +22,7 @@ UI:
   before_script:
     - npm install
   script:
-    - npm run codeceptjs
+    - npx codeceptjs run --steps --plugins allure
     - ls
   after_script:
     - sh .notify.sh
