@@ -11,8 +11,8 @@ module.exports = {
     searchResult: '#main > section > div > div > div.grey_column > div > h3',
   },
   searchButton: { css: '#inner_search_form > input[type=submit]' },
-  comeInButton: { css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a' },
-  registrationButton: { css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a' },
+  comeInButton: { css: '//a[contains(@href, \'login\')]' },
+  registrationButton: { css: '//a[contains(@href, \'signup\')]' },
   accountButton: { css: 'body > footer > nav > div.join > a' },
 
   // introducing methods
@@ -20,11 +20,11 @@ module.exports = {
     I.amOnPage(urls.tmdbUI);
     I.fillField(this.fields.search, param);
     I.click(this.searchButton);
-    I.waitForElement(this.fields.searchResult);
+    I.waitForElement(this.fields.searchResult, 5);
   },
   comeIn() {
     I.amOnPage(urls.tmdbUI);
-    I.waitForElement(this.comeInButton);
+    I.waitForElement(this.comeInButton, 5);
     I.click(this.comeInButton);
   },
   goRegistration() {
