@@ -35,11 +35,11 @@ Scenario('5. Пользователь может зарегистрироват�
 });
 
 // eslint-disable-next-line no-undef
-// Scenario('6. Пользователь может оставить рецензию на фильм', ({ I, loginPage, moviePage }) => {
-//   loginPage.login(userdata.username, userdata.password);
-//   moviePage.addReview();
-//   I.see('This review is currently awaiting moderator approval.');
-// });
+Scenario('6. Пользователь может оставить рецензию на фильм', ({ I, loginPage, moviePage }) => {
+  loginPage.login(userdata.username, userdata.password);
+  moviePage.addReview();
+  I.see('This review is currently awaiting moderator approval.');
+});
 
 // eslint-disable-next-line no-undef
 Scenario('7. Пользователь может посмотреть свой список избранного', ({
