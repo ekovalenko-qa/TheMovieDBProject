@@ -1,6 +1,5 @@
 // enable I and another page object
 const { I } = inject();
-const { urls } = require('../framework/config/urls');
 
 module.exports = {
   // setting locators

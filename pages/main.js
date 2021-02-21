@@ -7,6 +7,7 @@ module.exports = {
   fields: {
     search: '#inner_search_v4',
     movieName: '#popular_scroller > div > div:nth-child(3) > div.content > h2 > a',
+    searchResult: '#main > section > div > div > div.grey_column > div > h3',
   },
   searchButton: { css: '#inner_search_form > input[type=submit]' },
   comeInButton: { css: 'body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a' },
@@ -18,6 +19,7 @@ module.exports = {
     I.amOnPage(urls.tmdbUI);
     I.fillField(this.fields.search, param);
     I.click(this.searchButton);
+    I.waitForElement(this.fields.searchResult);
   },
   comeIn() {
     I.amOnPage(urls.tmdbUI);

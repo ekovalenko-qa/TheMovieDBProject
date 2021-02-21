@@ -47,6 +47,7 @@ module.exports = {
       .generate();
 
     mainPage.goRegistration();
+    I.waitForSelector(this.fields.username);
     I.fillField(this.fields.username, personData.Name);
     I.fillField(this.fields.password, personData.Password);
     I.fillField(this.fields.passwordConfirm, personData.Password);
