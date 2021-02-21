@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha --config .mocharc.yml",
+        "test": "mocha --config .mocharc.yml --reporter mochawesome",
         "codeceptjs": "npx codeceptjs run --steps --plugins allure",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app",
@@ -52,6 +52,7 @@
         "@codeceptjs/ui": "^0.4.3",
         "codeceptjs": "^3.0.5",
         "faker": "^5.4.0",
+        "mochawesome": "^6.2.2",
         "playwright": "^1.8.1",
         "supertest": "^6.1.3"
     }
