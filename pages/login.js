@@ -11,7 +11,6 @@ module.exports = {
   // introducing methods
   login(username, password) {
     mainPage.comeIn();
-    I.see('Войти в свою учётную запись');
     I.waitForSelector(this.fields.username);
     I.click(this.fields.username);
     I.fillField(this.fields.username, username);
