@@ -11,6 +11,7 @@ module.exports = {
   // introducing methods
   login(username, password) {
     mainPage.comeIn();
+    I.waitForSelector(this.fields.username);
     I.fillField(this.fields.username, username);
     I.fillField(this.fields.password, password);
     I.click(this.loginButton);
