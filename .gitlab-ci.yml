@@ -9,14 +9,14 @@ API:
   before_script:
     - npm install
   script:
-    - npm test --steps --plugins allure
+    - npm test
   after_script:
     - sh .notify.sh
   artifacts:
     when: always
     expire_in: 1 week
     paths:
-      - output
+      - outputAPI
 UI:
   image: mcr.microsoft.com/playwright:bionic
   stage: test
