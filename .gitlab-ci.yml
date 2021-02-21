@@ -54,7 +54,7 @@ pages:
   stage: reportpublic
   script:
     - mkdir public
-    - mv ./allure-report1/* public
+    - mv ./allure-report2/* public
 
   artifacts:
     paths:
