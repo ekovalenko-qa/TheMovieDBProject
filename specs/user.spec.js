@@ -1,5 +1,5 @@
-import { test } from '@jest/globals';
 import { apiProvider } from '../framework';
+import assert from 'assert';
 
 /** Тесты для авторизованного пользователя для API с использованием supertest и api провайдера на примере сайта themoviedb.org */
 
@@ -10,26 +10,23 @@ beforeEach(async () => {
 });
 
 describe('API тесты для https://developers.themoviedb.org, роль - пользователь', () => {
-  test('1. Проверить авторизацию путем ввода имени пользователя и пароля', async () => {
-    expect(authData.status)
-      .toBe(true);
+  it('1. Проверить авторизацию путем ввода имени пользователя и пароля', async () => {
+    assert.equal(authData.status,true);
   });
 
-  test('2. Добавить оценку фильму', async () => {
+  it('2. Добавить оценку фильму', async () => {
     const r = await apiProvider().MovieTMDB().addRate(authData.sessionId);
-    expect(r.status)
-      .toBe(201);
+    assert.equal(r.status,201);
   });
 
-  test('3. Удалить оценку фильма', async () => {
+  it('3. Удалить оценку фильма', async () => {
     const r = await apiProvider().MovieTMDB().deleteRate(authData.sessionId);
-    expect(r.status)
-      .toBe(200);
+    assert.equal(r.status,200);
   });
 
-  test('4. Добавить фильм в избранное', async () => {
+  it('4. Добавить фильм в избранное', async () => {
+    // eslint-disable-next-line max-len
     const r = await apiProvider().AccountTMDB().addToFavorite(authData.sessionId, authData.accountId);
-    expect(r.status)
-      .toBe(201);
+    assert.equal(r.status,201);
   });
 });
