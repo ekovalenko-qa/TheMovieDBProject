@@ -23,6 +23,7 @@ module.exports = {
   },
   comeIn() {
     I.amOnPage(urls.tmdbUI);
+    I.waitForElement(this.comeInButton);
     I.click(this.comeInButton);
   },
   goRegistration() {
@@ -30,6 +31,7 @@ module.exports = {
     I.click(this.registrationButton);
   },
   goToAccount() {
+    I.waitForSelector(this.accountButton);
     I.click(this.accountButton);
   },
 
