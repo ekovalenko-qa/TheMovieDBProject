@@ -10,8 +10,6 @@ API:
     - npm install
   script:
     - npm test
-  after_script:
-    - sh .notify.sh
   artifacts:
     when: always
     expire_in: 1 week

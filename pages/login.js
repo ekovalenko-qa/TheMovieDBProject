@@ -4,13 +4,15 @@ module.exports = {
   // setting locators
   fields: {
     password: '#password',
-    username: '//*[@id="username"]',
+    username: '#username',
   },
   loginButton: { css: '#login_button' },
 
   // introducing methods
   login(username, password) {
     mainPage.comeIn();
+    I.see('Войти в свою учётную запись');
+    I.waitForSelector(this.fields.username);
     I.click(this.fields.username);
     I.fillField(this.fields.username, username);
     I.click(this.fields.password);

@@ -1,7 +1,7 @@
 const { userdata } = require('../framework/config/userdata');
 
 // eslint-disable-next-line no-undef
-Feature('UI тесты для сайта https://www.themoviedb.org @smoke');
+Feature('UI тесты для сайта https://www.themoviedb.org');
 
 // eslint-disable-next-line no-undef
 Scenario('1. Пользователь может найти информацию о фильме по названию', ({ I, mainPage }) => {
@@ -46,8 +46,6 @@ Scenario('5. Пользователь может зарегистрироват�
 Scenario('7. Пользователь может посмотреть свой список избранного', ({ I, loginPage, mainPage, accountPage }) => {
   loginPage.login(userdata.username, userdata.password);
   mainPage.goToAccount();
-  I.see('Fox.red');
-  I.see('Статистика');
   accountPage.openFavorites();
   I.see('Избранные');
 });
