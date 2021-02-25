@@ -1,5 +1,5 @@
-import { apiProvider } from '../framework';
 import assert from 'assert';
+import { apiProvider } from '../framework';
 
 /** Тесты для авторизованного пользователя для API с использованием supertest и api провайдера на примере сайта themoviedb.org */
 

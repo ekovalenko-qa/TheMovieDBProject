@@ -1,4 +1,5 @@
-const { userdata } = require('../framework/config/userdata');
+//const { userdata } = require('../framework/config/userdata');
+const { userdata } = require('../framework/config/index');
 
 // eslint-disable-next-line no-undef
 Feature('UI тесты для сайта https://www.themoviedb.org, роль - пользователь');
