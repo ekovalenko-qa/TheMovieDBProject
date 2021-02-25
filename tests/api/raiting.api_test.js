@@ -11,7 +11,7 @@ beforeEach(async () => {
 });
 
 describe('api', () => {
-  it('1. Добавить оценку фильму', async () => {
+  it('Добавить оценку фильму', async () => {
     const movieID = '76341';
     const params = {
       value: 8.5,
@@ -20,7 +20,7 @@ describe('api', () => {
     assert.equal(r.status, 201);
   });
 
-  it('2. Удалить оценку фильма', async () => {
+  it('Удалить оценку фильма', async () => {
     const movieID = '76341';
     const r = await apiProvider().MovieTMDB().deleteRate(authData.sessionId, movieID);
     assert.equal(r.status, 200);

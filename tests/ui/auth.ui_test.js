@@ -4,7 +4,7 @@ const { userdata } = require('../../framework/config');
 Feature('ui');
 
 // eslint-disable-next-line no-undef
-Scenario('1. Пользователь может авторизоваться', ({ I, loginPage }) => {
+Scenario('Пользователь может авторизоваться', ({ I, loginPage }) => {
   loginPage.login(userdata.username, userdata.password);
   I.see('Fox.red');
 });
