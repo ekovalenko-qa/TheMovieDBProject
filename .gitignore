@@ -5,3 +5,5 @@ node_modules
 jest_html_reporters.html
 example-failed.png
 exampleFailed.jpg
+mochawesome-report
+output
