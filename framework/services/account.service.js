@@ -6,10 +6,10 @@ const headers = {
 };
 
 const AccountTMDB = function AccountTMDB() {
-  this.addToFavorite = async function addToFavorite(sessionId, accountId) {
+  this.addToFavorite = async function addToFavorite(sessionId, accountId, mediaID) {
     const params = {
       media_type: 'movie',
-      media_id: 550,
+      media_id: mediaID,
       favorite: true,
     };
     const r = await supertest(urls.tmdb)

@@ -15,18 +15,24 @@ describe('API тесты для https://developers.themoviedb.org, роль - п
   });
 
   it('2. Добавить оценку фильму', async () => {
-    const r = await apiProvider().MovieTMDB().addRate(authData.sessionId);
+    const params = {
+      value: 8.5,
+    };
+    const movieID = '76341';
+    const r = await apiProvider().MovieTMDB().addRate(authData.sessionId, movieID, params);
     assert.equal(r.status,201);
   });
 
   it('3. Удалить оценку фильма', async () => {
-    const r = await apiProvider().MovieTMDB().deleteRate(authData.sessionId);
+    const movieID = '76341';
+    const r = await apiProvider().MovieTMDB().deleteRate(authData.sessionId, movieID);
     assert.equal(r.status,200);
   });
 
   it('4. Добавить фильм в избранное', async () => {
+    const mediaID = 550;
     // eslint-disable-next-line max-len
-    const r = await apiProvider().AccountTMDB().addToFavorite(authData.sessionId, authData.accountId);
+    const r = await apiProvider().AccountTMDB().addToFavorite(authData.sessionId, authData.accountId, mediaID);
     assert.equal(r.status,201);
   });
 });
