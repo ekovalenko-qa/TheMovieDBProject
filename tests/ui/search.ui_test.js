@@ -8,7 +8,7 @@ Scenario('Гость может найти информацию о фильме 
 });
 
 // eslint-disable-next-line no-undef
-Scenario('Гость может найти информацию об артисте по имени', ({ I, mainPage }) => {
+Scenario('Гость может найти информацию об артисте по его имени', ({ I, mainPage }) => {
   mainPage.search('Bill Nighy');
   I.see('Search Results');
 });
