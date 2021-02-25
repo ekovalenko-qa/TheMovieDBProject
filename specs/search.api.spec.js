@@ -22,6 +22,7 @@ describe('api', () => {
       .SearchTMDB()
       .searchСollection(collectionName);
     assert.equal(r.status, 200);
+    assert.notEqual(r.body.results.length, 0);
   });
 
   it('3. Поиск по ключевому слову', async () => {
@@ -30,5 +31,6 @@ describe('api', () => {
       .SearchTMDB()
       .searchByKeyword(word);
     assert.equal(r.status, 200);
+    assert.notEqual(r.body.results.length, 0);
   });
 });
