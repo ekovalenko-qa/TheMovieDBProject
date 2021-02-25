@@ -1,6 +1,6 @@
 import { AccountTMDB } from './services/account.service';
 import { AuthTMDB } from './services/auth.service';
-import { MovieTMDB } from './services/movei.service';
+import { MovieTMDB } from './services/movie.service';
 import { SearchTMDB } from './services/search.service';
 
 const apiProvider = () => ({
