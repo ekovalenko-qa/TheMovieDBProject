@@ -5,5 +5,3 @@ jest_html_reporters.html
 example-failed.png
 exampleFailed.jpg
 .nyc_output
-output
-mochawesome-report
