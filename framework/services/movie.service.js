@@ -6,17 +6,17 @@ const headers = {
 };
 
 const MovieTMDB = function MovieTMDB() {
-  this.getById = async function getById(id) {
+  this.getById = async function getById(movieID) {
     const r = await supertest(urls.tmdb)
-      .get(`/3/movie/${id}`)
+      .get(`/3/movie/${movieID}`)
       .query({ api_key: `${apikeys.apikey_v3}` })
       .send();
     return r;
   };
-  this.getSimilar = async function getSimilar(id) {
+  this.getSimilar = async function getSimilar(movieID) {
     const r = await supertest(urls.tmdb)
-      .get(`/3/movie/${id}/similar`)
-      .query({ api_key: `${apikeys.apikey_v3}` })
+      .get(`/3/movie/${movieID}/similar`)
+      .query({ api_key: `${apikeys.apikey_v3}`})
       .send();
     return r;
   };

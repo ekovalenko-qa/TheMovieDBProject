@@ -8,16 +8,16 @@ const SearchTMDB = function SearchTMDB() {
       .query({ api_key: `${apikeys.apikey_v3}`, query: 'Emma Watson' });
     return r;
   };
-  this.searchByKeyword = async function searchByKeyword() {
+  this.searchByKeyword = async function searchByKeyword(word) {
     const r = await supertest(urls.tmdb)
       .get('/3/search/keyword')
-      .query({ api_key: `${apikeys.apikey_v3}`, query: 'South' });
+      .query({ api_key: `${apikeys.apikey_v3}`, query: word });
     return r;
   };
-  this.searchСollection = async function searchСollection() {
+  this.searchСollection = async function searchСollection(collectionName) {
     const r = await supertest(urls.tmdb)
       .get('/3/search/collection')
-      .query({ api_key: `${apikeys.apikey_v3}`, query: 'Showgirls' });
+      .query({ api_key: `${apikeys.apikey_v3}`, query: collectionName });
     return r;
   };
 };
