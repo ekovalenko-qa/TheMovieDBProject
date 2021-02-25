@@ -1,0 +1,152 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613906940086' stop='1613906955219'>
+    <name>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</title>
+    <test-cases>
+        <test-case start='1613906940655' status='passed' stop='1613906955214'>
+            <name>1. Пользователь может добавить фильм в избранное</name>
+            <title>1. Пользователь может добавить фильм в избранное</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613906940668' status='passed' stop='1613906947788'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906940669' status='passed' stop='1613906943036'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906943036' status='passed' stop='1613906943050'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906943050' status='passed' stop='1613906943436'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906943436' status='passed' stop='1613906946436'>
+                            <name>I wait 3</name>
+                            <title>I wait 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906946436' status='passed' stop='1613906946566'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906946566' status='passed' stop='1613906946771'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906946771' status='passed' stop='1613906946898'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906946898' status='passed' stop='1613906947092'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906947092' status='passed' stop='1613906947788'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906947788' status='passed' stop='1613906949843'>
+                    <name>mainPage: search "Девушка, которая боялась дождя"</name>
+                    <title>mainPage: search "Девушка, которая боялась дождя"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906947788' status='passed' stop='1613906948529'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906948529' status='passed' stop='1613906949052'>
+                            <name>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</name>
+                            <title>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906949052' status='passed' stop='1613906949751'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906949751' status='passed' stop='1613906949843'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906949843' status='passed' stop='1613906950917'>
+                    <name>moviePage: addToFavorites </name>
+                    <title>moviePage: addToFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906949843' status='passed' stop='1613906950532'>
+                            <name>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</name>
+                            <title>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906950532' status='passed' stop='1613906950917'>
+                            <name>I click {"css":"#favourite > span"}</name>
+                            <title>I click {"css":"#favourite > span"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906950917' status='passed' stop='1613906955214'>
+                    <name>mainPage: logOut </name>
+                    <title>mainPage: logOut </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906950917' status='passed' stop='1613906951550'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906951550' status='passed' stop='1613906953550'>
+                            <name>I wait 2</name>
+                            <title>I wait 2</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906953550' status='passed' stop='1613906955214'>
+                            <name>I click "body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li.user > a > div > img"</name>
+                            <title>I click "body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li.user > a > div > img"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

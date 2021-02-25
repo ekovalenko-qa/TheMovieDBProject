@@ -1,0 +1,355 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613896248541' stop='1613896286362'>
+    <name>UI тесты для сайта https://www.themoviedb.org:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org:</title>
+    <test-cases>
+        <test-case start='1613896249048' status='failed' stop='1613896257281'>
+            <name>1. Пользователь может найти информацию о фильме по названию</name>
+            <title>1. Пользователь может найти информацию о фильме по названию</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896249059' status='passed' stop='1613896252587'>
+                    <name>mainPage: search "Монстры на каникулах"</name>
+                    <title>mainPage: search "Монстры на каникулах"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896249059' status='passed' stop='1613896251373'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896251373' status='passed' stop='1613896251762'>
+                            <name>I fill field "#inner_search_v4", "Монстры на каникулах"</name>
+                            <title>I fill field "#inner_search_v4", "Монстры на каникулах"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896251762' status='passed' stop='1613896252472'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896252472' status='passed' stop='1613896252587'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896252587' status='failed' stop='1613896257280'>
+                    <name>I see "Search Results"</name>
+                    <title>I see "Search Results"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='4b405faf-92f8-4947-b23d-1c508e041708-attachment.png' type='image/png' size='177998'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1613896257578' status='failed' stop='1613896263620'>
+            <name>2. Пользователь может найти информацию об артисте по имени</name>
+            <title>2. Пользователь может найти информацию об артисте по имени</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896257581' status='passed' stop='1613896258934'>
+                    <name>mainPage: search "Bill Nighy"</name>
+                    <title>mainPage: search "Bill Nighy"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896257581' status='passed' stop='1613896258156'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896258156' status='passed' stop='1613896258433'>
+                            <name>I fill field "#inner_search_v4", "Bill Nighy"</name>
+                            <title>I fill field "#inner_search_v4", "Bill Nighy"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896258433' status='passed' stop='1613896258851'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896258851' status='passed' stop='1613896258934'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896258934' status='failed' stop='1613896263620'>
+                    <name>I see "Search Results"</name>
+                    <title>I see "Search Results"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='bbee8153-bad1-46bc-8bb2-a5537ac58071-attachment.png' type='image/png' size='77406'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1613896263905' status='failed' stop='1613896269595'>
+            <name>3. Пользователь может авторизоваться</name>
+            <title>3. Пользователь может авторизоваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896263907' status='passed' stop='1613896264909'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896263907' status='passed' stop='1613896264421'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896264421' status='passed' stop='1613896264431'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896264431' status='passed' stop='1613896264883'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896264883' status='passed' stop='1613896264909'>
+                            <name>I see "Войти в свою учётную запись"</name>
+                            <title>I see "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896264909' status='failed' stop='1613896269595'>
+                    <name>I see "Fox.red"</name>
+                    <title>I see "Fox.red"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='9504a620-b529-4816-89f8-461030d2f859-attachment.png' type='image/png' size='146559'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1613896269915' status='passed' stop='1613896273606'>
+            <name>4. Пользователь может добавить фильм в избранное</name>
+            <title>4. Пользователь может добавить фильм в избранное</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896269980' status='passed' stop='1613896270956'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896269980' status='passed' stop='1613896270539'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896270539' status='passed' stop='1613896270549'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896270550' status='passed' stop='1613896270934'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896270934' status='passed' stop='1613896270956'>
+                            <name>I see "Войти в свою учётную запись"</name>
+                            <title>I see "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896270956' status='passed' stop='1613896272553'>
+                    <name>mainPage: search "Девушка, которая боялась дождя"</name>
+                    <title>mainPage: search "Девушка, которая боялась дождя"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896270956' status='passed' stop='1613896271442'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896271442' status='passed' stop='1613896271963'>
+                            <name>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</name>
+                            <title>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896271963' status='passed' stop='1613896272447'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896272447' status='passed' stop='1613896272553'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896272553' status='passed' stop='1613896273606'>
+                    <name>moviePage: addToFavorites </name>
+                    <title>moviePage: addToFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896272553' status='passed' stop='1613896273271'>
+                            <name>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</name>
+                            <title>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896273271' status='passed' stop='1613896273606'>
+                            <name>I click {"css":"#favourite > span"}</name>
+                            <title>I click {"css":"#favourite > span"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613896273613' status='failed' stop='1613896280107'>
+            <name>5. Пользователь может зарегистрироваться</name>
+            <title>5. Пользователь может зарегистрироваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896274394' status='passed' stop='1613896275401'>
+                    <name>registrationPage: createAccount </name>
+                    <title>registrationPage: createAccount </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896274395' status='passed' stop='1613896275001'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896275001' status='passed' stop='1613896275401'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896275401' status='failed' stop='1613896280107'>
+                    <name>I see "Login"</name>
+                    <title>I see "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='95618507-298c-4bd2-b76a-fe160cd366f3-attachment.png' type='image/png' size='77123'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1613896280396' status='failed' stop='1613896286041'>
+            <name>7. Пользователь может посмотреть свой список избранного</name>
+            <title>7. Пользователь может посмотреть свой список избранного</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613896280399' status='passed' stop='1613896281367'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896280399' status='passed' stop='1613896280944'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896280944' status='passed' stop='1613896280952'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896280952' status='passed' stop='1613896281351'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613896281351' status='passed' stop='1613896281367'>
+                            <name>I see "Войти в свою учётную запись"</name>
+                            <title>I see "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613896281367' status='failed' stop='1613896286041'>
+                    <name>accountPage: openFavorites </name>
+                    <title>accountPage: openFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613896281367' status='failed' stop='1613896286041'>
+                            <name>I click "//*[@id="new_shortcut_bar"]/li[1]/span"</name>
+                            <title>I click "//*[@id="new_shortcut_bar"]/li[1]/span"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='da457c30-d8e6-43a1-9ad9-bbefd9ba0133-attachment.png' type='image/png' size='146559'/>
+            </attachments>
+            <failure>
+                <message>Clickable element "//*[@id="new_shortcut_bar"]/li[1]/span" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Clickable element "//*[@id="new_shortcut_bar"]/li[1]/span" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:2423:11)
+                    at Playwright.proceedClick (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:2182:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

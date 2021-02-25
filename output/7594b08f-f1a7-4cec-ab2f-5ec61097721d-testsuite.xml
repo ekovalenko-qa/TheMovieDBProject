@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613870455881' stop='1613870465678'>
+    <name>UI тесты для сайта https://www.themoviedb.org @smoke:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org @smoke:</title>
+    <test-cases>
+        <test-case start='1613870456243' status='failed' stop='1613870465380'>
+            <name>5. Пользователь может зарегистрироваться</name>
+            <title>5. Пользователь может зарегистрироваться</title>
+            <labels>
+                <label name='tag' value='@smoke'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1613870457088' status='passed' stop='1613870460681'>
+                    <name>registrationPage: createAccount </name>
+                    <title>registrationPage: createAccount </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613870457088' status='passed' stop='1613870458712'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870458712' status='passed' stop='1613870459144'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(4) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870459144' status='passed' stop='1613870459387'>
+                            <name>I fill field "#username", "Ida"</name>
+                            <title>I fill field "#username", "Ida"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870459387' status='passed' stop='1613870459689'>
+                            <name>I fill field "#password", "vdlIszA8XEKbJ8b"</name>
+                            <title>I fill field "#password", "vdlIszA8XEKbJ8b"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870459689' status='passed' stop='1613870459991'>
+                            <name>I fill field "#password_confirm", "vdlIszA8XEKbJ8b"</name>
+                            <title>I fill field "#password_confirm", "vdlIszA8XEKbJ8b"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870459991' status='passed' stop='1613870460338'>
+                            <name>I fill field "#email", "Levi43@hotmail.com"</name>
+                            <title>I fill field "#email", "Levi43@hotmail.com"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613870460338' status='passed' stop='1613870460681'>
+                            <name>I click {"css":"#sign_up_button"}</name>
+                            <title>I click {"css":"#sign_up_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613870460681' status='failed' stop='1613870465380'>
+                    <name>I see "Войти в свою учётную запись"</name>
+                    <title>I see "Войти в свою учётную запись"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='5982f7bd-b1a9-4586-a0ed-7ba077fc4f9b-attachment.png' type='image/png' size='66354'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

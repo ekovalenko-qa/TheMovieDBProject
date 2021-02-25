@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613897490453' stop='1613897499723'>
+    <name>UI тесты для сайта https://www.themoviedb.org:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org:</title>
+    <test-cases>
+        <test-case start='1613897490814' status='failed' stop='1613897499462'>
+            <name>7. Пользователь может посмотреть свой список избранного</name>
+            <title>7. Пользователь может посмотреть свой список избранного</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613897490826' status='failed' stop='1613897499462'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613897490826' status='passed' stop='1613897494351'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613897494351' status='passed' stop='1613897494362'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613897494362' status='passed' stop='1613897494725'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613897494725' status='failed' stop='1613897499462'>
+                            <name>I see "Войти в свою учётную запись"</name>
+                            <title>I see "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='becc2c66-14bb-4f46-a99b-6b6e6b7aa00e-attachment.png' type='image/png' size='123810'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

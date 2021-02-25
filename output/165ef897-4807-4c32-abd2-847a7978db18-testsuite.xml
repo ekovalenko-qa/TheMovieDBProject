@@ -1,0 +1,186 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613906510456' stop='1613906541511'>
+    <name>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</title>
+    <test-cases>
+        <test-case start='1613906511154' status='failed' stop='1613906540992'>
+            <name>1. Пользователь может добавить фильм в избранное</name>
+            <title>1. Пользователь может добавить фильм в избранное</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613906511168' status='passed' stop='1613906519329'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906511169' status='passed' stop='1613906513354'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906513355' status='passed' stop='1613906513365'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906513365' status='passed' stop='1613906513830'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906513830' status='passed' stop='1613906516832'>
+                            <name>I wait 3</name>
+                            <title>I wait 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906516832' status='passed' stop='1613906516952'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906516952' status='passed' stop='1613906517176'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906517176' status='passed' stop='1613906517305'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906517305' status='passed' stop='1613906517504'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906517504' status='passed' stop='1613906519328'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906519329' status='passed' stop='1613906521574'>
+                    <name>mainPage: search "Девушка, которая боялась дождя"</name>
+                    <title>mainPage: search "Девушка, которая боялась дождя"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906519329' status='passed' stop='1613906520133'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906520133' status='passed' stop='1613906520649'>
+                            <name>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</name>
+                            <title>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906520649' status='passed' stop='1613906521428'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906521428' status='passed' stop='1613906521574'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906521574' status='passed' stop='1613906522586'>
+                    <name>moviePage: addToFavorites </name>
+                    <title>moviePage: addToFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906521574' status='passed' stop='1613906522231'>
+                            <name>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</name>
+                            <title>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906522231' status='passed' stop='1613906522586'>
+                            <name>I click {"css":"#favourite > span"}</name>
+                            <title>I click {"css":"#favourite > span"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613906522586' status='failed' stop='1613906540992'>
+                    <name>mainPage: logOut </name>
+                    <title>mainPage: logOut </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613906522586' status='passed' stop='1613906523227'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906523227' status='passed' stop='1613906525228'>
+                            <name>I wait 2</name>
+                            <title>I wait 2</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906525228' status='passed' stop='1613906527164'>
+                            <name>I click "body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li.user > a > div > img"</name>
+                            <title>I click "body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li.user > a > div > img"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906527164' status='passed' stop='1613906527170'>
+                            <name>I wait for text "Выйти"</name>
+                            <title>I wait for text "Выйти"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906527170' status='passed' stop='1613906527170'>
+                            <name>KuKu!</name>
+                            <title>KuKu!</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613906527170' status='failed' stop='1613906540992'>
+                            <name>I click "/html/body/div[11]/div/div[1]/div/div[4]/p/a"</name>
+                            <title>I click "/html/body/div[11]/div/div[1]/div/div[4]/p/a"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='03f41849-92c6-4e94-be84-ba578d42cb9f-attachment.png' type='image/png' size='769549'/>
+            </attachments>
+            <failure>
+                <message>page.$$: Unexpected token "/" while parsing selector "/html/body/div[11]/div/div[1]/div/div[4]/p/a"</message>
+                <stack-trace>page.$$: Unexpected token "/" while parsing selector "/html/body/div[11]/div/div[1]/div/div[4]/p/a"
+                    at Connection.sendMessageToServer (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\connection.js:69:15)
+                    at Proxy.&lt;anonymous> (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\channelOwner.js:44:61)
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\frame.js:205:48
+                    at Frame._wrapApiCall (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\channelOwner.js:72:34)
+                    at Frame.$$ (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\frame.js:204:21)
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:233:60
+                    at Page._attributeToPage (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:205:20)
+                    at Page.$$ (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:233:21)
+                    at Playwright.findElements (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:2168:18)
+                    at Playwright.findClickable (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:2220:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613899074380' stop='1613899079097'>
+    <name>UI тесты для сайта https://www.themoviedb.org:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org:</title>
+    <test-cases>
+        <test-case start='1613899075078' status='passed' stop='1613899079039'>
+            <name>7. Пользователь может посмотреть свой список избранного</name>
+            <title>7. Пользователь может посмотреть свой список избранного</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613899075093' status='passed' stop='1613899079039'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613899075094' status='passed' stop='1613899077141'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077141' status='passed' stop='1613899077152'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077152' status='passed' stop='1613899077544'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077544' status='passed' stop='1613899077608'>
+                            <name>I wait for text "Войти в свою учётную запись"</name>
+                            <title>I wait for text "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077608' status='passed' stop='1613899077608'>
+                            <name>KuKu</name>
+                            <title>KuKu</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077609' status='passed' stop='1613899077735'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077736' status='passed' stop='1613899077961'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899077961' status='passed' stop='1613899078080'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899078080' status='passed' stop='1613899078275'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899078275' status='passed' stop='1613899079039'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

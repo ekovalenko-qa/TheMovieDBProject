@@ -1,0 +1,448 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613932010409' stop='1613932028340'>
+    <name>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</title>
+    <test-cases>
+        <test-case start='1613932010409' status='passed' stop='1613932013296'>
+            <name>1. Пользователь может авторизоваться</name>
+            <title>1. Пользователь может авторизоваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613932010412' status='passed' stop='1613932012995'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932010412' status='passed' stop='1613932011036'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011036' status='passed' stop='1613932011044'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011045' status='passed' stop='1613932011438'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011438' status='passed' stop='1613932011444'>
+                            <name>I wait for element "#username", 10</name>
+                            <title>I wait for element "#username", 10</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011444' status='passed' stop='1613932011587'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011587' status='passed' stop='1613932011787'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011787' status='passed' stop='1613932011921'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932011921' status='passed' stop='1613932012110'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932012110' status='passed' stop='1613932012995'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932012995' status='passed' stop='1613932013296'>
+                    <name>I see "Fox.red"</name>
+                    <title>I see "Fox.red"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613932013300' status='passed' stop='1613932018265'>
+            <name>2. Пользователь может добавить фильм в избранное</name>
+            <title>2. Пользователь может добавить фильм в избранное</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613932013302' status='passed' stop='1613932015712'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932013302' status='passed' stop='1613932013986'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932013986' status='passed' stop='1613932013992'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932013992' status='passed' stop='1613932014364'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932014364' status='passed' stop='1613932014371'>
+                            <name>I wait for element "#username", 10</name>
+                            <title>I wait for element "#username", 10</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932014372' status='passed' stop='1613932014519'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932014519' status='passed' stop='1613932014719'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932014719' status='passed' stop='1613932014836'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932014837' status='passed' stop='1613932015025'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932015025' status='passed' stop='1613932015712'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932015712' status='passed' stop='1613932017321'>
+                    <name>mainPage: search "Девушка, которая боялась дождя"</name>
+                    <title>mainPage: search "Девушка, которая боялась дождя"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932015712' status='passed' stop='1613932016392'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932016392' status='passed' stop='1613932016875'>
+                            <name>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</name>
+                            <title>I fill field "#inner_search_v4", "Девушка, которая боялась дождя"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932016875' status='passed' stop='1613932017298'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932017298' status='passed' stop='1613932017321'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3"</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932017321' status='passed' stop='1613932018265'>
+                    <name>moviePage: addToFavorites </name>
+                    <title>moviePage: addToFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932017321' status='passed' stop='1613932017928'>
+                            <name>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</name>
+                            <title>I click "#card_movie_5cca0faa0e0a2604b5ed2366 > div > div.details > div.wrapper > div > div > a > h2"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932017928' status='passed' stop='1613932018265'>
+                            <name>I click {"css":"#favourite > span"}</name>
+                            <title>I click {"css":"#favourite > span"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613932018277' status='passed' stop='1613932023669'>
+            <name>3. Пользователь может оставить рецензию на фильм</name>
+            <title>3. Пользователь может оставить рецензию на фильм</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613932018280' status='passed' stop='1613932020865'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932018280' status='passed' stop='1613932018931'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932018931' status='passed' stop='1613932018940'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932018941' status='passed' stop='1613932019331'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932019331' status='passed' stop='1613932019344'>
+                            <name>I wait for element "#username", 10</name>
+                            <title>I wait for element "#username", 10</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932019344' status='passed' stop='1613932019489'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932019489' status='passed' stop='1613932019690'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932019690' status='passed' stop='1613932019820'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932019820' status='passed' stop='1613932020006'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932020006' status='passed' stop='1613932020865'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932020865' status='passed' stop='1613932023657'>
+                    <name>moviePage: addReview </name>
+                    <title>moviePage: addReview </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932020866' status='passed' stop='1613932021807'>
+                            <name>I am on page "https://www.themoviedb.org/tv/1622-supernatural"</name>
+                            <title>I am on page "https://www.themoviedb.org/tv/1622-supernatural"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932021807' status='passed' stop='1613932022028'>
+                            <name>I click {"css":"#reviews"}</name>
+                            <title>I click {"css":"#reviews"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932022028' status='passed' stop='1613932022532'>
+                            <name>I click {"css":"#media_v4 > div > div > div:nth-child(1) > div > section.panel.media_panel.social_panel.tv_panel > section > div.content > div > div > div > p > a"}</name>
+                            <title>I click {"css":"#media_v4 > div > div > div:nth-child(1) > div > section.panel.media_panel.social_panel.tv_panel > section > div.content > div > div > div > p > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932022532' status='passed' stop='1613932022978'>
+                            <name>I fill field "#editor-textarea > div > textarea", "Its amazing! I like it."</name>
+                            <title>I fill field "#editor-textarea > div > textarea", "Its amazing! I like it."</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932022978' status='passed' stop='1613932023657'>
+                            <name>I click {"css":"#submit"}</name>
+                            <title>I click {"css":"#submit"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932023657' status='passed' stop='1613932023669'>
+                    <name>I see "This review is currently awaiting moderator approval."</name>
+                    <title>I see "This review is currently awaiting moderator approval."</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613932023674' status='passed' stop='1613932028332'>
+            <name>4. Пользователь может посмотреть свой список избранного</name>
+            <title>4. Пользователь может посмотреть свой список избранного</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613932023677' status='passed' stop='1613932026279'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932023677' status='passed' stop='1613932024354'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932024354' status='passed' stop='1613932024369'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932024369' status='passed' stop='1613932024745'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932024745' status='passed' stop='1613932024782'>
+                            <name>I wait for element "#username", 10</name>
+                            <title>I wait for element "#username", 10</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932024783' status='passed' stop='1613932024921'>
+                            <name>I click "#username"</name>
+                            <title>I click "#username"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932024921' status='passed' stop='1613932025123'>
+                            <name>I fill field "#username", "Fox.red"</name>
+                            <title>I fill field "#username", "Fox.red"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932025123' status='passed' stop='1613932025255'>
+                            <name>I click "#password"</name>
+                            <title>I click "#password"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932025255' status='passed' stop='1613932025444'>
+                            <name>I fill field "#password", "q12345"</name>
+                            <title>I fill field "#password", "q12345"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932025444' status='passed' stop='1613932026279'>
+                            <name>I click {"css":"#login_button"}</name>
+                            <title>I click {"css":"#login_button"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932026279' status='passed' stop='1613932027327'>
+                    <name>mainPage: goToAccount </name>
+                    <title>mainPage: goToAccount </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932026279' status='passed' stop='1613932026860'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932026860' status='passed' stop='1613932026866'>
+                            <name>I wait for text "Привет, Fox.red!"</name>
+                            <title>I wait for text "Привет, Fox.red!"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932026866' status='passed' stop='1613932027327'>
+                            <name>I click {"css":"body > footer > nav > div.join > a"}</name>
+                            <title>I click {"css":"body > footer > nav > div.join > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932027327' status='passed' stop='1613932028176'>
+                    <name>accountPage: openFavorites </name>
+                    <title>accountPage: openFavorites </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613932027327' status='passed' stop='1613932027437'>
+                            <name>I wait for text "Обзор"</name>
+                            <title>I wait for text "Обзор"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932027437' status='passed' stop='1613932027619'>
+                            <name>I click "//*[@id="new_shortcut_bar"]/li[1]/span"</name>
+                            <title>I click "//*[@id="new_shortcut_bar"]/li[1]/span"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932027619' status='passed' stop='1613932027766'>
+                            <name>I click "//*[@id="new_shortcut_bar"]/li[1]/div/ul/li[2]/span"</name>
+                            <title>I click "//*[@id="new_shortcut_bar"]/li[1]/div/ul/li[2]/span"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613932027766' status='passed' stop='1613932028176'>
+                            <name>I click "//*[@id="new_shortcut_bar"]/li[1]/div/ul/li[2]/div/ul/li[1]/a"</name>
+                            <title>I click "//*[@id="new_shortcut_bar"]/li[1]/div/ul/li[2]/div/ul/li[1]/a"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613932028176' status='passed' stop='1613932028331'>
+                    <name>I see "Избранные"</name>
+                    <title>I see "Избранные"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613899822390' stop='1613899830281'>
+    <name>UI тесты для сайта https://www.themoviedb.org:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org:</title>
+    <test-cases>
+        <test-case start='1613899822720' status='failed' stop='1613899827765'>
+            <name>3. Пользователь может авторизоваться</name>
+            <title>3. Пользователь может авторизоваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613899822732' status='failed' stop='1613899827765'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613899822732' status='passed' stop='1613899826378'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899826378' status='passed' stop='1613899826390'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899826390' status='passed' stop='1613899826761'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899826761' status='failed' stop='1613899827764'>
+                            <name>I wait for text "Войти в свою учётную запись"</name>
+                            <title>I wait for text "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='6bb60bc7-80f0-4c11-9ac5-d8c6b92eb336-attachment.png' type='image/png' size='123827'/>
+            </attachments>
+            <failure>
+                <message>Text "Войти в свою учётную запись" was not found on page after 1 sec
+                page.waitForFunction: Timeout 1000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: Text "Войти в свою учётную запись" was not found on page after 1 sec
+                page.waitForFunction: Timeout 1000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:1984:13</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1613899828054' status='failed' stop='1613899829999'>
+            <name>7. Пользователь может посмотреть свой список избранного</name>
+            <title>7. Пользователь может посмотреть свой список избранного</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613899828056' status='failed' stop='1613899829999'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613899828056' status='passed' stop='1613899828618'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899828618' status='passed' stop='1613899828627'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899828627' status='passed' stop='1613899828997'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613899828997' status='failed' stop='1613899829999'>
+                            <name>I wait for text "Войти в свою учётную запись"</name>
+                            <title>I wait for text "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='8f60880c-a64d-4f73-8573-2bb2bcaf437d-attachment.png' type='image/png' size='123827'/>
+            </attachments>
+            <failure>
+                <message>Text "Войти в свою учётную запись" was not found on page after 1 sec
+                page.waitForFunction: Timeout 1000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: Text "Войти в свою учётную запись" was not found on page after 1 sec
+                page.waitForFunction: Timeout 1000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:1984:13</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

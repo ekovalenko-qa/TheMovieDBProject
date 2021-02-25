@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613932696206' stop='1613932698882'>
+    <name>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org, роль - пользователь:</title>
+    <test-cases>
+        <test-case start='1613932696206' status='passed' stop='1613932698734'>
+            <name>1. Пользователь может авторизоваться</name>
+            <title>1. Пользователь может авторизоваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613932698673' status='passed' stop='1613932698734'>
+                    <name>I see "Fox.red"</name>
+                    <title>I see "Fox.red"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

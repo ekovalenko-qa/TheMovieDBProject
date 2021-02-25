@@ -1,0 +1,75 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613895837124' stop='1613895941356'>
+    <name>UI тесты для сайта https://www.themoviedb.org:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org:</title>
+    <test-cases>
+        <test-case start='1613895837734' status='failed' stop='1613895941279'>
+            <name>3. Пользователь может авторизоваться</name>
+            <title>3. Пользователь может авторизоваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613895837749' status='failed' stop='1613895941279'>
+                    <name>loginPage: login "Fox.red", "q12345"</name>
+                    <title>loginPage: login "Fox.red", "q12345"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613895837749' status='passed' stop='1613895839940'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613895839940' status='passed' stop='1613895839956'>
+                            <name>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I wait for element {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613895839956' status='passed' stop='1613895840391'>
+                            <name>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</name>
+                            <title>I click {"css":"body > div.page_wrap._wrap > header > div.content > div > div.flex > ul > li:nth-child(3) > a"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613895840391' status='passed' stop='1613895840476'>
+                            <name>I see "Войти в свою учётную запись"</name>
+                            <title>I see "Войти в свою учётную запись"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613895840476' status='failed' stop='1613895941278'>
+                            <name>I wait for navigation {"waitUntil":"networkidle"}</name>
+                            <title>I wait for navigation {"waitUntil":"networkidle"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "networkidle"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "networkidle"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at Frame._setupNavigationWaiter (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\frame.js:85:70)
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\frame.js:95:33
+                    at Frame._wrapApiCall (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\channelOwner.js:72:34)
+                    at Frame.waitForNavigation (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\frame.js:93:21)
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:282:60
+                    at Page._attributeToPage (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:205:20)
+                    at Page.waitForNavigation (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\playwright\lib\client\page.js:282:21)
+                    at Playwright.waitForNavigation (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\helper\Playwright.js:2088:22)
+                    at Step.run (C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\step.js:66:47)
+                    at C:\Users\ekovalenko\OTUS\Project_gitlab\TheMovieDB\node_modules\codeceptjs\lib\actor.js:117:23</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

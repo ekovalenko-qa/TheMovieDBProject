@@ -1,0 +1,133 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1613933487555' stop='1613933493307'>
+    <name>UI тесты для сайта https://www.themoviedb.org, роль - гость:</name>
+    <title>UI тесты для сайта https://www.themoviedb.org, роль - гость:</title>
+    <test-cases>
+        <test-case start='1613933487865' status='passed' stop='1613933490418'>
+            <name>1. Гость может найти информацию о фильме по названию</name>
+            <title>1. Гость может найти информацию о фильме по названию</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613933487876' status='passed' stop='1613933490407'>
+                    <name>mainPage: search "Монстры на каникулах"</name>
+                    <title>mainPage: search "Монстры на каникулах"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613933487876' status='passed' stop='1613933489303'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933489304' status='passed' stop='1613933489688'>
+                            <name>I fill field "#inner_search_v4", "Монстры на каникулах"</name>
+                            <title>I fill field "#inner_search_v4", "Монстры на каникулах"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933489688' status='passed' stop='1613933490238'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933490238' status='passed' stop='1613933490407'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3", 5</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613933490407' status='passed' stop='1613933490417'>
+                    <name>I see "Search Results"</name>
+                    <title>I see "Search Results"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613933490424' status='passed' stop='1613933491699'>
+            <name>2. Гость может найти информацию об артисте по имени</name>
+            <title>2. Гость может найти информацию об артисте по имени</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613933490425' status='passed' stop='1613933491692'>
+                    <name>mainPage: search "Bill Nighy"</name>
+                    <title>mainPage: search "Bill Nighy"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613933490425' status='passed' stop='1613933490953'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933490954' status='passed' stop='1613933491200'>
+                            <name>I fill field "#inner_search_v4", "Bill Nighy"</name>
+                            <title>I fill field "#inner_search_v4", "Bill Nighy"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933491200' status='passed' stop='1613933491589'>
+                            <name>I click {"css":"#inner_search_form > input[type=submit]"}</name>
+                            <title>I click {"css":"#inner_search_form > input[type=submit]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933491589' status='passed' stop='1613933491692'>
+                            <name>I wait for element "#main > section > div > div > div.grey_column > div > h3", 5</name>
+                            <title>I wait for element "#main > section > div > div > div.grey_column > div > h3", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613933491692' status='passed' stop='1613933491699'>
+                    <name>I see "Search Results"</name>
+                    <title>I see "Search Results"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1613933491703' status='passed' stop='1613933493303'>
+            <name>3. Гость может зарегистрироваться</name>
+            <title>3. Гость может зарегистрироваться</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1613933492333' status='passed' stop='1613933493287'>
+                    <name>registrationPage: createAccount </name>
+                    <title>registrationPage: createAccount </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1613933492333' status='passed' stop='1613933492929'>
+                            <name>I am on page "https://www.themoviedb.org"</name>
+                            <title>I am on page "https://www.themoviedb.org"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1613933492930' status='passed' stop='1613933493287'>
+                            <name>I click {"css":"//a[contains(@href, 'signup')]"}</name>
+                            <title>I click {"css":"//a[contains(@href, 'signup')]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1613933493287' status='passed' stop='1613933493303'>
+                    <name>I see "Login"</name>
+                    <title>I see "Login"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
