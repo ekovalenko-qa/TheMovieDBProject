@@ -1,14 +1,15 @@
 import * as assert from 'assert';
-import { apiProvider } from '../framework';
+import { apiProvider } from '../../framework';
 
 // eslint-disable-next-line max-len
 /**  Тесты для неавторизованного пользователя  для API с использованием supertest и api провайдера на примере сайта themoviedb.org */
 
 describe('api', () => {
-  it('Возвращает топ фильмов', async () => {
+  it('Основная информация о фильме по id', async () => {
+    const movieID = '76341';
     const r = await apiProvider()
       .MovieTMDB()
-      .getTop();
+      .getById(movieID);
     assert.equal(r.status, 200);
   });
 });

@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha --config .mocharc.yml --grep api --reporter mochawesome",
+        "test": "mocha --grep api --config .mocharc.yml --reporter mochawesome",
         "codeceptjs": "npx codeceptjs run --steps --plugins allure",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app",

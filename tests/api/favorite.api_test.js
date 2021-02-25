@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { apiProvider } from '../framework';
+import { apiProvider } from '../../framework';
 
 // eslint-disable-next-line max-len
 /** Тесты для авторизованного пользователя для API с использованием supertest и api провайдера на примере сайта themoviedb.org */
