@@ -13,16 +13,18 @@ describe('API тесты для https://developers.themoviedb.org, роль - г
   });
 
   it('2. Основная информация о фильме по id', async () => {
+    const id = '76341';
     const r = await apiProvider()
       .MovieTMDB()
-      .getById();
+      .getById(id);
     assert.equal(r.status,200);
   });
 
   it('3. Список похожих фильмов', async () => {
+    const id = '76341';
     const r = await apiProvider()
       .MovieTMDB()
-      .getSimilar();
+      .getSimilar(id);
     assert.equal(r.status,200);
   });
 
