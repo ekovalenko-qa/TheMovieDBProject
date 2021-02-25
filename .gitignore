@@ -1,7 +1,6 @@
 package-lock.json
 node_modules
 .idea
-.nyc_output
 jest_html_reporters.html
 example-failed.png
 exampleFailed.jpg
