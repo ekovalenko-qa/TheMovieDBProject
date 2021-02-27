@@ -1,5 +1,8 @@
-const { userdata } = require('../config/userdata');
-const { apikeys } = require('../config/apikeys');
-const { urls } = require('../config/urls');
+const { apikeys } = require('./apikeys');
+const { headers } = require('./headers');
+const { userdata } = require('./userdata');
+const { urls } = require('./urls');
 
-module.exports = { apikeys, urls, userdata };
+module.exports = {
+  apikeys, headers, urls, userdata,
+};

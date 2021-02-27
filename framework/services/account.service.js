@@ -1,9 +1,5 @@
 import supertest from 'supertest';
-import { apikeys, urls } from '../config';
-
-const headers = {
-  'Content-Type': 'application/json',
-};
+import { apikeys, headers, urls } from '../config';
 
 const AccountTMDB = function AccountTMDB() {
   this.addToFavorite = async function addToFavorite(sessionId, accountId, mediaID) {

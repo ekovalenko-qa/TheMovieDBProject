@@ -1,9 +1,5 @@
 import supertest from 'supertest';
-import { apikeys, urls } from '../config';
-
-const headers = {
-  'Content-Type': 'application/json',
-};
+import { apikeys, headers, urls } from '../config';
 
 const MovieTMDB = function MovieTMDB() {
   this.getById = async function getById(movieID) {

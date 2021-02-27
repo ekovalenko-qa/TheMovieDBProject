@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-import { apikeys, userdata, urls } from '../config';
+import { apikeys, headers, userdata, urls } from '../config';
 
 /** Авторизация происходит в 3 этапа:
 1. Создание временного токена tempToken
@@ -12,10 +12,6 @@ import { apikeys, userdata, urls } from '../config';
  accountId: <id аккаунта}>
  }
  */
-
-const headers = {
-  'Content-Type': 'application/json',
-};
 
 const AuthTMDB = function AuthTMDB() {
   this.usernameAuth = async function usernameAuth() {
